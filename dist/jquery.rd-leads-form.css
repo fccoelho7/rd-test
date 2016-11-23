@@ -1,0 +1,51 @@
+.rd-leads-form {
+  position: relative; }
+  .rd-leads-form.modal-active .overlay,
+  .rd-leads-form.modal-active .modal-wrap {
+    opacity: 1;
+    visibility: visible; }
+  .rd-leads-form.modal-active .modal-wrap {
+    transform: translateY(0);
+    transition: all .3s; }
+  .rd-leads-form .overlay,
+  .rd-leads-form .modal-wrap {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s; }
+  .rd-leads-form .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 998; }
+  .rd-leads-form .modal-wrap {
+    background-color: #FFF;
+    border-radius: 5px;
+    position: relative;
+    padding: 20px;
+    left: 5%;
+    width: 90%;
+    z-index: 999;
+    transform: translateY(-200%); }
+  .rd-leads-form .modal-close {
+    background-color: #f1f1f1;
+    border-radius: 100%;
+    color: #666;
+    font-size: 22px;
+    float: right;
+    padding: 1px 11px 3px; }
+    .rd-leads-form .modal-close:hover {
+      text-decoration: none; }
+  .rd-leads-form form {
+    clear: both; }
+  @media (min-width: 768px) {
+    .rd-leads-form .modal-wrap {
+      left: 10%;
+      width: 80%; } }
+  @media (min-width: 1024px) {
+    .rd-leads-form .modal-wrap {
+      left: 25%;
+      width: 50%; } }
+
+/*# sourceMappingURL=jquery.rd-leads-form.css.map */

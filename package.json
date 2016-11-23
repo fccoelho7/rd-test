@@ -1,0 +1,30 @@
+{
+  "name": "RDLeadsForm",
+  "version": "1.0.0",
+  "description": "A jQuery plugin to capture leads.",
+  "main": "src/jquery-rd-leads-form.js",
+  "author": "Fabio Carvalho",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "jasmine": "^2.5.2",
+    "jasmine-core": "^2.5.2",
+    "jquery": "^3.1.1",
+    "karma": "^1.3.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-browserify": "^5.1.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-jquery": "^0.1.1",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "watchify": "^3.7.0"
+  },
+  "scripts": {
+    "sass": "sass -w src/jquery.rd-leads-form.scss:dist/jquery.rd-leads-form.css",
+    "watch": "watchify src/jquery.rd-leads-form.js -o dist/jquery.rd-leads-form.js -v",
+    "test": "karma start"
+  }
+}
