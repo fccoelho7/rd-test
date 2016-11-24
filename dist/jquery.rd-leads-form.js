@@ -17,11 +17,11 @@
 					modal: false
         };
 
-        this.el = element;
+        this.el = $(element);
         this.settings = $.extend({}, defaults, options);
 				this.modal = this.settings.modal;
         this.render();
-				this.form = $(this.el).find('form')[0];
+				this.form = this.el.find('form')[0];
         this.listeners();
       }
 
@@ -29,9 +29,8 @@
         $(this.form).on('submit', this.submitForm.bind(this));
 
 				if (this.modal) {
-					const el = $(this.el);
-					const open = el.find('.modal-open')[0];
-					const close = el.find('.modal-close')[0];
+					const open = this.el.find('.modal-open');
+					const close = this.el.find('.modal-close');
 
 					$(open).on('click', this.toggleModal.bind(this));
 					$(close).on('click', this.toggleModal.bind(this));
@@ -40,7 +39,7 @@
 
 			toggleModal(ev) {
 				ev.preventDefault();
-				$(this.el).toggleClass('modal-active');
+				this.el.toggleClass('modal-active');
 			}
 
       submitForm(ev) {
@@ -59,23 +58,22 @@
 					}
         });
 
-        request.done(this.formSubmittedDone.bind(this));
-        request.fail(this.formSubmittedFail.bind(this));
+        request.done(this.formSendDone.bind(this));
+        request.fail(this.formSendFail.bind(this));
       }
 
-      formSubmittedDone(data) {
+      formSendDone(data) {
         this.showAlert('done');
 				this.resetForm();
       }
 
-      formSubmittedFail(jqXHR, textStatus) {
+      formSendFail(jqXHR, textStatus) {
         this.showAlert('fail');
       }
 
       showAlert(type) {
-				const el = $(this.el);
-        const done = el.find('.rd-leads-form-done')[0];
-        const fail = el.find('.rd-leads-form-fail')[0];
+        const done = this.el.find('.rd-leads-form-done');
+        const fail = this.el.find('.rd-leads-form-fail');
 
         switch (type) {
           case 'done':
@@ -95,16 +93,15 @@
 			}
 
       render() {
-				const el = $(this.el);
 
-				el.addClass('rd-leads-form');
+				this.el.addClass('rd-leads-form');
 
 				if (!this.modal) {
-					el.html(this.formComponent());
+					this.el.html(this.formComponent());
 					return;
 				}
 
-				el.html(this.modalComponent());
+				this.el.html(this.modalComponent());
       }
 
 			modalComponent() {
@@ -123,12 +120,12 @@
 				const { states, levels } = this.settings.fields;
 
         return `
-    			${this.alertsComponent()}
           <form action="${url}" type="POST">
 						${this.inputComponent('name', 'text', 'Nome', 'Digite seu nome.')}
 						${this.inputComponent('email', 'email', 'E-mail', 'Digite seu e-mail.')}
             ${this.selectComponent('state', states, 'Estado')}
             ${this.selectComponent('level', levels, 'Nível')}
+						${this.alertsComponent()}
             <button class="btn btn-primary">Enviar</button>
           </form>
         `;
