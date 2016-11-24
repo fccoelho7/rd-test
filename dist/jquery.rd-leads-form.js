@@ -74,8 +74,8 @@
 
       showAlert(type) {
 				const el = $(this.el);
-        const done = el.find('.rd-leads-form-done');
-        const fail = el.find('.rd-leads-form-fail');
+        const done = el.find('.rd-leads-form-done')[0];
+        const fail = el.find('.rd-leads-form-fail')[0];
 
         switch (type) {
           case 'done':
