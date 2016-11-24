@@ -25,6 +25,6 @@
   "scripts": {
     "sass": "sass -w src/jquery.rd-leads-form.scss:dist/jquery.rd-leads-form.css",
     "watch": "watchify src/jquery.rd-leads-form.js -o dist/jquery.rd-leads-form.js -v",
-    "test": "karma start"
+    "test": "karma start --single-run"
   }
 }
