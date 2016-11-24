@@ -19,7 +19,7 @@ It's necessary jQuery installed, you can download it [here](http://jquery.com/do
 <link href="jquery.rd-leads-form.css" rel="stylesheet" />
 ```
 
-### Create HTML markup
+### Step 2: Create HTML markup
 
 Create a `<div class="leads-box"></div>` element.
 
