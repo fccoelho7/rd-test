@@ -2,7 +2,7 @@ module.exports = function(karma) {
   karma.set({
     plugins: ['karma-babel-preprocessor', 'karma-browserify', 'karma-jasmine', 'karma-jasmine-jquery', 'karma-phantomjs-launcher'],
 
-    frameworks: ['browserify', 'jasmine'],
+    frameworks: ['browserify', 'jasmine-jquery', 'jasmine'],
 
     files: [
       './node_modules/jquery/dist/jquery.min.js',
