@@ -25,7 +25,7 @@ Create a `<div class="leads-box"></div>` element.
 
 ### Step 3: Call the RD Leads Form
 
-Call .RDLeadsForm() on <div class="leads-box">. Note that the call must be made inside of a $(document).ready() call, or the plugin maybe will not work!
+Call `.RDLeadsForm()` on `<div class="leads-box">`. Note that the call must be made inside of a $(document).ready() call, or the plugin maybe will not work!
 
 ```html
 <script type="text/javascript" charset="utf-8">
