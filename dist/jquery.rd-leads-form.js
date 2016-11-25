@@ -136,7 +136,7 @@
 					<div class="rd-leads-form-fail alert alert-danger hidden" role="alert">Alguma coisa deu errada! :/</div>
 					<div class="rd-leads-form-done alert alert-success hidden" role="alert">Formulário enviado com sucesso! :D</div>
 				`;
-			};
+			}
 
 			inputComponent(name, type, label, placeholder) {
 				return `
