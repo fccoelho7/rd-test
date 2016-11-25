@@ -1,6 +1,6 @@
 # jQuery RD Leads Form
 
-[![Build Status](https://travis-ci.org/fccoelho7/rd-test.svg?branch=master)](https://travis-ci.org/fccoelho7/rd-test)
+[![Build Status](https://travis-ci.org/fccoelho7/rd-test.svg?branch=master)](https://travis-ci.org/fccoelho7/rd-test) [![Code Climate](https://codeclimate.com/github/fccoelho7/rd-test/badges/gpa.svg)](https://codeclimate.com/github/fccoelho7/rd-test)
 
 > Permits you to converts users in leads, easily.
 
